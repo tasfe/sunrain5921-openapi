@@ -1,8 +1,6 @@
 package org.sunrain.openapi.service;
 
 import java.util.List;
-
-import org.sunrain.openapi.model.AccessToken;
 import org.sunrain.openapi.model.City;
 import org.sunrain.openapi.model.Country;
 import org.sunrain.openapi.model.Province;
@@ -10,10 +8,6 @@ import org.sunrain.openapi.model.User;
 import org.sunrain.openapi.model.Weibo;
 
 public interface WeiboApi {
-	
-	public String getRedirectUrl();
-
-	public AccessToken getAccessTokenByCode(String code) throws Exception;
 
 	public User getUserByUid(String uid, String accessaToken) throws Exception;
 
