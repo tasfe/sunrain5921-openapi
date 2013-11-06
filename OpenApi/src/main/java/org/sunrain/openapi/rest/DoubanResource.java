@@ -8,7 +8,6 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
@@ -24,7 +23,7 @@ public class DoubanResource {
 
 	@Autowired
 	private DoubanApi doubanApi;
-
+	
 	@GET
 	@Path("/oauth/redirect_url")
 	@Produces({ "application/json;qs=1", "application/xml;qs=.5" })
@@ -35,16 +34,14 @@ public class DoubanResource {
 	@GET
 	@Path("/oauth/callback")
 	@Produces({ "application/json;qs=1", "application/xml;qs=.5" })
-	public AccessToken callback(@QueryParam("code") String code)
-			throws Exception {
+	public AccessToken callback(@QueryParam("code") String code) throws Exception {
 		return doubanApi.getAccessTokenByCode(code);
 	}
 
 	@GET
 	@Path("/user/~me")
 	@Produces({ "application/json;qs=1", "application/xml;qs=.5" })
-	public User getCurrentUser(@QueryParam("access_token") String accessToken)
-			throws Exception {
+	public User getCurrentUser(@QueryParam("access_token") String accessToken) throws Exception {
 		return doubanApi.getCurrentUser(accessToken);
 	}
 

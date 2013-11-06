@@ -15,8 +15,9 @@ import org.sunrain.openapi.util.ConfigPropertyReader;
 import org.sunrain.openapi.util.Constants;
 
 @Service
-public class DoubanService implements DoubanApi, OauthApi {
+public class DoubanService implements DoubanApi {
 
+	@Override
 	public String getRedirectUrl() {
 		return new StringBuilder(
 				ConfigPropertyReader.getValue(DoubanConstants.AUTHORIZE_URL_KEY))

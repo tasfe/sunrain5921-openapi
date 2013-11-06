@@ -7,7 +7,7 @@ import org.sunrain.openapi.model.Province;
 import org.sunrain.openapi.model.User;
 import org.sunrain.openapi.model.Weibo;
 
-public interface WeiboApi {
+public interface WeiboApi extends OauthApi {
 
 	public User getUserByUid(String uid, String accessaToken) throws Exception;
 
