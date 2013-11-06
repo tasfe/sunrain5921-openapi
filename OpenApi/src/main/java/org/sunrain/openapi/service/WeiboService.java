@@ -18,7 +18,7 @@ import org.sunrain.openapi.util.ConfigPropertyReader;
 import org.sunrain.openapi.util.Constants;
 
 @Service
-public class WeiboService implements WeiboApi {
+public class WeiboService implements WeiboApi, OauthApi {
 
 	public final static String PROXY_HOST = "cn-proxy.cn.oracle.com";
 	public final static String PROXY_PORT = "80";
