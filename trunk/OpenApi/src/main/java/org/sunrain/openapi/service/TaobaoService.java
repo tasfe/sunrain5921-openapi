@@ -12,7 +12,7 @@ import org.sunrain.openapi.util.ConfigPropertyReader;
 import org.sunrain.openapi.util.Constants;
 
 @Service
-public class TaobaoService implements TaobaoApi, OauthApi {
+public class TaobaoService implements TaobaoApi {
 
 	@Override
 	public String getRedirectUrl() {
