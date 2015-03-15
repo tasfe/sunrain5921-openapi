@@ -1,0 +1,1 @@
+integration of Weibo, QQ, Douban, Taobao
